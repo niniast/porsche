@@ -5,11 +5,17 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: radial-gradient(circle at top, #5d1f25 0%, #1c1c1c 40%, #0d0d0d 100%);
-  color: var(--light-main);
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top,
+        #a54552 0%,   /* <- ღია წითელი */
+        #3e3e3e 40%,  /* <- რბილი მუქი ნაცრისფერი */
+        #1a1a1a 100%  /* <- ღია შავი */
+    );
+    color: var(--light-main);
+    line-height: 1.6;
+    margin: 0;
 }
+
 
 header {
   width: 100%;
