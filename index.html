@@ -5,21 +5,51 @@
     <link rel="stylesheet" href="style.css">
     <title>Registration</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <header class="logo">
+    <header>
         <div><img src="pictures/logo.jpg" alt="Logo"></div>
     </header>
+
     <main>
-      <div>
-        text
-      </div>
-      <div>
-        Registration
-      </div>        
+      <section class="info">
+      <h1>event information</h1>
+      <p>
+        about text
+      </p>
+    </section>
+      <section class="timer">
+      <h2>დარჩენილი დრო რეგისტრაციისთვის</h2>
+      <div id="timer">00:00:00</div>
+    </section>   
+    <section class="registration">
+      <h2>სარეგისტრაციო ფორმა</h2>
+      <form id="registrationForm">        
+        <div class="guest-block">
+          <h3>სტუმარი</h3>
+          <div class="form-row">
+            <label for="guest1-firstname">სახელი</label>
+            <input type="text" id="guest1-firstname" name="guest1_firstname" required>
+          </div>
+          <div class="form-row">
+            <label for="guest1-lastname">გვარი</label>
+            <input type="text" id="guest1-lastname" name="guest1_lastname" required>
+          </div>
+          <div class="form-row">
+            <label for="guest1-email">ელ. ფოსტა</label>
+            <input type="email" id="guest1-email" name="guest1_email" required>
+          </div>
+          <div class="form-row">
+            <label for="guest1-phone">ტელეფონი</label>
+            <input type="tel" id="guest1-phone" name="guest1_phone" required>
+          </div>
+        </div>    
     </main>
-    <footer>
-      footer
-    </footer>
+
+  <footer class="footer">
+    <p>© 2025 ღონისძიების დასახელება. ყველა უფლება დაცულია.</p>
+  </footer>
+
 </body>
 </html>
