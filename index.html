@@ -6,46 +6,56 @@
     <title>Registration</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <header>
-        <div><img src="pictures/logo.jpg" alt="Logo"></div>
+    <header class="bg-white border-bottom shadow-sm py-3">
+      <div class="container d-flex align-items-center">
+        <img src="pictures/logo.jpg" alt="Logo" class="header-logo">
+      </div>
     </header>
 
     <main>
-      <section class="info">
-      <h1>event information</h1>
-      <p>
-        about text
-      </p>
+      <section class="info container text-start my-5">
+        <h1 class="mb-3 fw-bold">Event Information</h1>
+        <p class="lead">
+          About text
+        </p>
+      </section>
+
+
+      <section class="timer container text-center my-5">
+        <h2 class="fw-bold mb-3">დარჩენილი დრო რეგისტრაციისთვის</h2>
+        <div id="timer" class="display-4 text-danger fw-bold">
+          00:00:00
+        </div>
+      </section>  
+
+    <section class="registration container mt-5">
+      <h2 class="mb-4 fw-bold">სარეგისტრაციო ფორმა</h2>
+        <form id="registrationForm">
+          <div class="guest-block mb-4 p-4 border rounded shadow-sm">
+            <h3 class="mb-3 text-danger">სტუმარი</h3>
+            <div class="mb-3">
+              <label class="form-label">სახელი</label>
+              <input type="text" class="form-control" required>
+            </div> 
+            <div class="mb-3">
+              <label class="form-label">გვარი</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">ელ. ფოსტა</label>
+              <input type="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">ტელეფონი</label>
+              <input type="tel" class="form-control" required>
+            </div>
+          </div>
+        </form>
     </section>
-      <section class="timer">
-      <h2>დარჩენილი დრო რეგისტრაციისთვის</h2>
-      <div id="timer">00:00:00</div>
-    </section>   
-    <section class="registration">
-      <h2>სარეგისტრაციო ფორმა</h2>
-      <form id="registrationForm">        
-        <div class="guest-block">
-          <h3>სტუმარი</h3>
-          <div class="form-row">
-            <label for="guest1-firstname">სახელი</label>
-            <input type="text" id="guest1-firstname" name="guest1_firstname" required>
-          </div>
-          <div class="form-row">
-            <label for="guest1-lastname">გვარი</label>
-            <input type="text" id="guest1-lastname" name="guest1_lastname" required>
-          </div>
-          <div class="form-row">
-            <label for="guest1-email">ელ. ფოსტა</label>
-            <input type="email" id="guest1-email" name="guest1_email" required>
-          </div>
-          <div class="form-row">
-            <label for="guest1-phone">ტელეფონი</label>
-            <input type="tel" id="guest1-phone" name="guest1_phone" required>
-          </div>
-        </div>    
-    </main>
+  </main>
 
   <footer class="footer">
     <p>© 2025 ღონისძიების დასახელება. ყველა უფლება დაცულია.</p>
