@@ -1,153 +1,132 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "MyCustomFont"; /* ზედმეტსახელი, რომელსაც CSS–ში გამოიყენებ */
+    src: url("fonts/Ferrari-SansMedium\ 9.otf") format("opentype"); /* გზა .otf ფაილის მიმართულებით */
+    font-weight: normal; /* ან bold, თუ ფონტს ასე აქვს */
+    font-style: normal; /* ან italic, თუ ფაილი არის წრიული */
+    font-display: swap; /* რეკომენდებულია უკეთესი გადატვირთვისთვის */
+}
+.center {
+    flex: 1;
+    text-align: center;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: radial-gradient(circle at top,
-        #a54552 0%,   /* <- ღია წითელი */
-        #3e3e3e 40%,  /* <- რბილი მუქი ნაცრისფერი */
-        #1a1a1a 100%  /* <- ღია შავი */
-    );
-    color: var(--light-main);
-    line-height: 1.6;
-    margin: 0;
+    font-family: "MyCustomFont", sans-serif;
 }
 
-
-header {
-  width: 100%;
-  padding: 18px 0;
-
-  background: linear-gradient(
-    to bottom,
-    #000000 0%,
-    #0d0000 30%,
-    #290000 60%,
-    #a32121 100%
-  );
-  border-bottom: 2px solid #a32121;
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ed1c24;
+    height: 228px;
 }
 
-
-.header-logo {
-  height: 60px;
-  width: auto;
-}
-   
-
-main {
-  width: 100%;
-  padding: 20px;
+.site-header .logo {
+    height: 70px;
+    margin-top: 36px;
+    margin-left: 64px;
 }
 
+.main {
+    width: 100%;
+    padding: 20px;
+}
+.hero {
+    background: url("pictures/back.jpg") no-repeat center center/cover;
+}
+.btn {
+    background-color: #000; /* შავი ფონი */
+    color: #fff; /* თეთრი ტექსტი */
+    border: none; /* თუ არ გინდა საზღვარი */
+    border-radius: 10px; /* მრგვალი კუთხეები */
+    padding: 8px 10px; /* შიდა შუალედი */
+}
+.right .btn:hover,
+.right .btn:focus,
+.right .btn:active,
+.right .btn:visited {
+    color: #fff !important;
+    border: none !important;
+}
 
+.right .btn img {
+    margin-right: 8px; /* ტექსტსა და გამოსახულებას შორის სივრცე */
+}
 .info {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center; 
+    max-width: 900px;
+    margin: 0 auto;
 }
-
 
 .info h1 {
-  font-size: 32px;
-  font-weight: 700;
-  color: #ffffff;              
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
 }
 
 /* About text */
 .info p {
-  font-size: 18px;
-  color: #e5e5e5;                /* რბილი თეთრი / ღია ნაცრისფერი */
-  margin-bottom: 0;
-  letter-spacing: 0.4px;
+    font-size: 18px;
+    color: var(--light-main); /* რბილი თეთრი / ღია ნაცრისფერი */
+    margin-bottom: 0;
+    letter-spacing: 0.4px;
 }
-
-
-
-.timer {
-  max-width: 600px;
-  margin: 40px auto;
-  text-align: center;
-}
-
-#timer {
-  font-size: 40px;
-  font-weight: bold;
-  color: var(--accent-red);
-  letter-spacing: 2px;
-  text-shadow: 0px 0px 6px rgba(255,0,0,0.4);
-}
-
-
-.timer h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #ffffff;   /* თეთრი ფერი */
-}
-
-
 
 .registration {
-  max-width: 900px;
-  margin: 50px auto;
+    max-width: 900px;
+    margin: 50px auto;
 }
 
 .registration h2 {
-  font-size: 28px;
-  margin-bottom: 25px;
-  color: #ffffff;
-  text-align: left;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: var(--text-light);
+    text-align: left;
 }
 
 .guest-block {
-  background: linear-gradient(
-    180deg,
-    #f7f7f7 0%,
-    #f0f0f0 40%,
-    #e8e8e8 100%
-  );
-  border: 1px solid #d6d6d6;
-  border-radius: 18px;
-  padding: 26px;
-  margin-bottom: 28px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(180deg, #f7f7f7 0%, #f0f0f0 40%, #e8e8e8 100%);
+    border: 1px solid #d6d6d6;
+    border-radius: 18px;
+    padding: 26px;
+    margin-bottom: 28px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
 }
-
 
 /* სტუმრის სათაური */
 .guest-block h3 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #d32020;        /* წითელი აქცენტი */
-  margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--accent-red); /* წითელი აქცენტი */
+    margin-bottom: 16px;
 }
 .form-control {
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  color: #111111;
+    background-color: var(--text-light);
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
 }
 
 .form-control:focus {
-  border-color: var(--accent-red);
-  box-shadow: 0 0 0 0.15rem rgba(228,37,40,0.25);
+    border-color: var(--accent-red);
+    box-shadow: 0 0 0 0.15rem rgba(211, 32, 32, 0.25); /* Adjusted to match --accent-red */
 }
 
-
 footer {
-  background: #111;             
-  padding: 20px 10px;           
-  text-align: center;           
-  margin-top: 40px;             
-  border-top: 3px solid #cc0000; 
+    background: #111;
+    padding: 20px 10px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 3px solid var(--ferrari-red);
 }
 
 footer p {
-  color: #eee;                  
-  font-size: 14px;              
-  letter-spacing: 0.5px;       
+    color: #eee;
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }
