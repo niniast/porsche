@@ -58,36 +58,26 @@ body {
 .right .btn img {
     margin-right: 8px; /* ტექსტსა და გამოსახულებას შორის სივრცე */
 }
-.info {
-    max-width: 900px;
-    margin: 0 auto;
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
 }
-
-.info h1 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    letter-spacing: 0.5px;
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* About text */
-.info p {
-    font-size: 18px;
-    color: var(--light-main); /* რბილი თეთრი / ღია ნაცრისფერი */
-    margin-bottom: 0;
-    letter-spacing: 0.4px;
-}
 
 .registration {
-    max-width: 900px;
-    margin: 50px auto;
-}
-
-.registration h2 {
-    font-size: 28px;
-    margin-bottom: 25px;
-    color: var(--text-light);
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .guest-block {
